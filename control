@@ -1,0 +1,10 @@
+Package: me.gmoran.darkerdarkmode
+Name: OLED Dark Mode
+Depends: mobilesubstrate
+Version: 0.1
+Architecture: iphoneos-arm
+Description: Make iOS 13's OLED-Friendly
+Depiction: http://gmoran.me/depictions/darkerdarkmode.html
+Maintainer: Guillermo Moran (@fr0st)
+Author: Guillermo Moran (@fr0st)
+Section: Tweaks
