@@ -121,6 +121,7 @@
 }
 
 %end
+%end
 
 %group SBMainWorkspace
 %hook SBMainWorkspace
@@ -138,5 +139,3 @@
     [pool release];
 }
 
-
-%end
