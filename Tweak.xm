@@ -122,16 +122,21 @@
 
 %end
 
-
+%group SBMainWorkspace
+%hook SBMainWorkspace
++ (id)start {
+    id orig = %orig;
+    %init(UIColorHook);
+    return orig;
+}
+%end
 %end
 
 %ctor {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
-    %init(UIColorHook);
-
-    //dlopen("/Library/MobileSubstrate/DynamicLibraries/IconSupport.dylib", RTLD_NOW);
-    //[[objc_getClass("ISIconSupport") sharedInstance] addExtension:@"com.gmoran.index"];
-
+    %init(SBMainWorkspace);
     [pool release];
 }
+
+
+%end
